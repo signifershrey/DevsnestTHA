@@ -1,0 +1,32 @@
+
+
+legend {
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px 50px 5px 50px;
+}
+.container {
+  display: flex;  
+  flex-direction: row;
+  justify-content: flex-start;    
+}
+
+.left {
+  
+  padding: 40px;
+  text-align: left;
+  /* display: flex;
+  flex-direction: column;  */
+}
+.right {
+  text-align: left;
+  padding: 40px;
+}
+
+.sub-heading {
+  font-size: larger;
+  font-weight: bold;
+  color: blue;
+}
