@@ -1,0 +1,109 @@
+body {
+  border: 50px;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(98,252,255,1) 36%, rgba(0,212,255,1) 100%);
+
+}
+
+.clock {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(245, 245, 245);
+  border: 50px solid rgb(230, 9, 9);
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  box-shadow: -3px 1px 28px 15px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: -3px 1px 28px 15px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: -3px 1px 28px 15px rgba(0, 0, 0, 0.75) inset;
+/* 
+  box-shadow: -3px 1px 28px 15px rgba(0,0,0,0.75);
+-webkit-box-shadow: -3px 1px 28px 15px rgba(0,0,0,0.75);
+-moz-box-shadow: -3px 1px 28px 15px rgba(0,0,0,0.75); */
+}
+
+.hour-hand {
+  height: 120px;
+  width: 4px;
+  /* border: 2px solid rgb(247, 244, 244); */
+  background-color: rgb(12, 11, 11);
+  margin-bottom: 10px;
+  transform-origin: top center;
+  transform: rotate(-20deg);
+  position: relative;
+  top: 150px;
+  left: 120px;
+}
+
+.min-hand {
+  height: 120px;
+  width: 4px;
+  background-color: rgb(23, 24, 23);
+  margin-bottom: 20px;
+  transform-origin: top center;
+  transform: rotate(30deg);
+  position: relative;
+  top: 150px;
+  left: 120px;
+}
+
+.sec-hand {
+  height: 120px;
+  width: 4px;
+
+  background-color: rgb(10, 10, 10);
+  margin-bottom: 20px;
+  transform-origin: top center;
+  transform: rotate(-60deg);
+  position: relative;
+  top: 150px;
+  left: 120px;
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  background-color: rgb(17, 16, 16);
+  border-radius: 50%;
+  position: relative;
+  top: 140px;
+  left: 135px;
+  z-index: 2;
+}
+
+.mark {
+  position: absolute;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  color: #55626A;
+  transform: translate(-50%,-50%);
+}
+
+.twelve {
+  top:25px;
+  left:50%;
+}
+.three {
+  right:25px;
+  top:50%;
+  transform:translate(50%,-50%);
+  --rotation: 90;
+}
+.six {
+  bottom:25px;
+  left:50%;
+  transform:translate(-50%,50%);
+}
+.nine {
+  left:25px;
+  top:50%;
+}
+
