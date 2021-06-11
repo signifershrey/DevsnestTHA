@@ -1,0 +1,65 @@
+/* body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+#particle-js{
+    height: 100%;
+    background: black;
+
+} */
+
+body {
+  margin: 0;
+  background-color: rgb(163, 163, 163);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: capitalize;
+  /* border: 5px solid black; */
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.heading > p {
+  text-align: center;
+  text-decoration: brown;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.inner-container {
+  border: 5px solid black;
+  color: wheat;
+  padding: 20px;
+  box-shadow: 3px 1px 5px 36px rgba(0, 0, 0, 0.72);
+  -webkit-box-shadow: 3px 1px 5px 36px rgba(0, 0, 0, 0.72);
+  -moz-box-shadow: 3px 1px 5px 36px rgba(0, 0, 0, 0.72);
+  background: #080808;
+}
+
+#btn {
+  /* display: inline-block; */
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid #ffffff00;
+  border-radius: 2em;
+  font-weight: 300;
+  color: #080808;
+  transition: all 0.2s;
+}
+
+#result {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  /* border: 3px dashed green; */
+  padding: 20px 0 20 0;
+}

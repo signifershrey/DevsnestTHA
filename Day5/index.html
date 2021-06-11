@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalcyLite</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <div class="heading">
+          <h1><u>CalcyLite</u></h1>
+          <p>➕ ➖ ✖ ➗</p>
+        </div>
+        <br />
+        <form>
+        <div class="input">
+          <input type="reset" value="🔄" />
+          <label for="val1"><h4>Enter 1st Value</h4></label>
+          <input type="number" id="val1" placeholder="" />
+
+          <label for="val2"><h4>Enter 2nd Value</h4></label>
+
+          <input type="number" id="val2" placeholder="" />
+        </form>
+        </div>
+        <br />
+        <div class="operations">
+          <button id="btn">+</button>
+          <button id="btn">-</button>
+          <button id="btn">*</button>
+          <button id="btn">/</button>
+        </div>
+        <br />
+        <div id="result"></div>
+      </div>
+      <script src="./index.js"></script>
+    </div>
+  </body>
+</html>
