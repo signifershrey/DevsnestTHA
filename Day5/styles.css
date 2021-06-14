@@ -1,13 +1,8 @@
-/* body{
-    margin: 0px;
-    padding: 0px;
-    height: 100vh;
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
 }
-#particle-js{
-    height: 100%;
-    background: black;
-
-} */
 
 body {
   margin: 0;
@@ -16,11 +11,10 @@ body {
 
 .heading {
   font-weight: bold;
-  font-size: 30px;
+  /* font-size: 1.5em; */
   text-transform: capitalize;
-  /* border: 5px solid black; */
-  padding-left: 40px;
-  padding-right: 40px;
+  text-align: center;
+  font-size: calc(12px + 1vw);
 }
 
 .heading > p {
@@ -28,22 +22,39 @@ body {
   text-decoration: brown;
 }
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   margin-top: 40px;
+  position: absolute;
+  width: 50%;
+  top: 20%;
+  right: 0;
+  left: 0;
+  bottom: 20%;
+  margin: auto;
+  max-width: 70%;
+box-shadow: -12px 5px 115px 8px rgba(127,113,113,0.81);
+-webkit-box-shadow: -12px 5px 115px 8px rgba(127,113,113,0.81);
+-moz-box-shadow: -12px 5px 115px 8px rgba(127,113,113,0.81);
 }
 
 .inner-container {
-  border: 5px solid black;
+  /* border: 5px solid black; */
   color: wheat;
-  padding: 20px;
-  box-shadow: 3px 1px 5px 36px rgba(0, 0, 0, 0.72);
-  -webkit-box-shadow: 3px 1px 5px 36px rgba(0, 0, 0, 0.72);
-  -moz-box-shadow: 3px 1px 5px 36px rgba(0, 0, 0, 0.72);
-  background: #080808;
+  padding: 10px;
 }
 
+.input {
+  width: 100%;
+  text-align: center;
+}
+
+.input > input {
+  width: 40%;
+  padding: 3px;
+}
+
+.operations {
+  text-align: center;
+}
 #btn {
   /* display: inline-block; */
   padding: 0.3em 1.2em;
@@ -54,6 +65,9 @@ body {
   color: #080808;
   transition: all 0.2s;
 }
+#reset {
+  width: fit-content;
+}
 
 #result {
   font-size: 30px;
@@ -61,5 +75,55 @@ body {
   text-align: center;
   text-decoration: underline;
   /* border: 3px dashed green; */
-  padding: 20px 0 20 0;
+  padding: 20px 0 20px 0;
+}
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #050505;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
 }
