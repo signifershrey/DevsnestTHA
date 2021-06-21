@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: #ebd4cb;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playing-area{
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.cards{
+    border: 2px solid blue;
+    display: grid;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.aircraft{
+    background-color: rgb(95, 176, 230);
+    background-image: url('./assests/aircraft.svg');
+    background-size: cover;
+    
+}
+
+.tv{
+    background-image: url('./assests/TV.svg'); 
+    background-size: cover;
+    background-color: rgb(32, 230, 220);
+}
+
+.birthday{
+    background-image: url('./assests/birthday.svg');
+    background-size: cover;
+    background-color: rgb(231, 224, 119);
+    
+}
+
+.netflix{
+    background-image: url('./assests/netflix.svg');
+    background-size: cover;
+    background-color: rgb(42, 95, 91);
+    
+}
+
+.music{
+    background-image: url('./assests/music.svg');
+    background-size: cover;
+    background-color: rgb(96, 187, 78);
+    
+}
+.error{
+    background-image: url('./assests/error.svg');
+    background-size: cover;
+    background-color: rgb(185, 27, 27);
+    
+}
