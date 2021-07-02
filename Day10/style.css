@@ -3,6 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: lightcoral;
+  background-size: cover;
+  font-family: sans-serif;
+}
+.header {
+  font-size: 1em;
+  background-color: transparent;
+}
+.stats{
+  background-color: salmon;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 80vw;
+}
 
 .container {
   height: 100vh;
@@ -13,60 +31,56 @@
   flex-direction: column;
   align-items: center;
 }
-
-.playing-area{
-    display: flex;
-    width: 80vw;
-    height: 80vh;
-    /* border: 2px solid black; */
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+.cards-area {
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+  border: 5px solid #53210d;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  cursor: pointer;
+  background: rgb(192, 7, 7);
+}
+.card {
+  background: green;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-.cards{
-    border: 2px solid blue;
-    display: grid;
-    background-size: cover;
-    cursor: pointer;
+.card {
+  /* width: 23%;
+  height: 23%;
+  margin: 5px;
+ 
+  cursor: pointer;
+  background-color: transparent; */
 }
 
-.aircraft{
-    background-color: rgb(95, 176, 230);
-    background-image: url('./assests/aircraft.svg');
-    background-size: cover;
-    
+.card:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in-out;
 }
 
-.tv{
-    background-image: url('./assests/TV.svg'); 
-    background-size: cover;
-    background-color: rgb(32, 230, 220);
+.card.flip {
+  transform: rotateY(180deg);
+  cursor: pointer;
 }
 
-.birthday{
-    background-image: url('./assests/birthday.svg');
-    background-size: cover;
-    background-color: rgb(231, 224, 119);
-    
+.front,
+.back {
+  background-color: #807f7f;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  backface-visibility: hidden;
 }
 
-.netflix{
-    background-image: url('./assests/netflix.svg');
-    background-size: cover;
-    background-color: rgb(42, 95, 91);
-    
-}
-
-.music{
-    background-image: url('./assests/music.svg');
-    background-size: cover;
-    background-color: rgb(96, 187, 78);
-    
-}
-.error{
-    background-image: url('./assests/error.svg');
-    background-size: cover;
-    background-color: rgb(185, 27, 27);
-    
+.front {
+  transform: rotateY(180deg);
 }

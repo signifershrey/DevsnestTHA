@@ -9,20 +9,88 @@
   </head>
   <body>
     <div class="container">
-      <h1>Memory Game</h1>
-      <div class="playing-area">
-        <div class="cards aircraft">10</div>
-        <div class="cards aircraft" img src="./assests/aircraft.svg"></div>
-        <div class="cards birthday" img src="./assests/birthday.svg"></div>
-        <div class="cards birthday" img src="./assests/birthday.svg"></div>
-        <div class="cards error" img src="./assests/error.svg"></div>
-        <div class="cards error" img src="./assests/error.svg"></div>
-        <div class="cards music" img src="./assests/music.svg"></div>
-        <div class="cards music" img src="./assests/music.svg"></div>
-        <div class="cards netflix" img src="./assests/netflix.svg"></div>
-        <div class="cards netflix" img src="./assests/netflix.svg"></div>
-        <div class="cards tv" img src="./assests/TV.svg"></div>
-        <div class="cards tv" img src="./assests/TV.svg"></div>
+      <div class="header">
+        <h1>MEMORY GAME</h1>
+          </div>
+         <div class="stats">
+        <h1>Moves Remaining : <span id="move_counter"></span></h1>
+        <h1>Score : <span id="score"></span></h1>
+          </div>
+    
+      <div class="cards-area">
+        <div class="card" data-image="aircraft">
+          <img src="./assests/aircraft.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="aircraft">
+          <img src="./assests/aircraft.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="birthday">
+          <img src="./assests/birthday.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="birthday">
+          <img src="./assests/birthday.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="music">
+          <img src="./assests/music.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="music">
+          <img src="./assests/music.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="cars">
+          <img src="./assests/cars.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="cars">
+          <img src="./assests/cars.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="error">
+          <img src="./assests/error.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="error">
+          <img src="./assests/error.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="netflix">
+          <img src="./assests/netflix.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="netflix">
+          <img src="./assests/netflix.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="tv">
+          <img src="./assests/TV.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="tv">
+          <img src="./assests/TV.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+
+        <div class="card" data-image="teddy">
+          <img src="./assests/teddy_bear_.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+        <div class="card" data-image="teddy">
+          <img src="./assests/teddy_bear_.svg" class="front"></img>
+          <img src="./assests/plainimage.svg" class="back"></img>
+        </div>
+    
+
       </div>
     </div>
     <script src="./script.js"></script>
