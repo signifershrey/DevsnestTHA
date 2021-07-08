@@ -3,163 +3,85 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  background: #4591dd;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: #7c797949;
 }
-
-#container {
-  width: 45vw;
-  height: 75vh;
-  text-align: center;
-  background: rgb(150, 150, 150);
-  overflow-y: auto;
-  color: rgb(255, 253, 253);
-  border: 5px solid rgb(7, 7, 7);
+.container {
+  width: 350px;
+  height: 400px;
+  background: #0c0b0bc7;
+  position: absolute;
+  top: 20%;
+  left: 30%;
   border-radius: 10px;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #312d2d, #ec9c9c);
-  box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
 }
 
-#container::-webkit-scrollbar {
-  width: 1em;
-}
-#container::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-#container::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-  background: #e0e0e0;
-}
-
-h1 {
-  font-family: cursive;
-  padding: 20px;
-}
-
-#container ul {
+.todoList {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-ul li {
-  list-style: none;
-  border: 2px solid rgb(4, 12, 14);
-  width: 70%;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  height: 50px;
+  justify-content: space-between;
   margin: 10px;
-  text-align: left;
-  padding-left: 10px;
-  
-  background: #e0e0e0;
-  box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
-}
-
-#container ul li label {
-color: black;
-  font-size: 20px;
-  padding-left: 10px;
-  font-family: "Times New Roman", Times, serif;
-  width: 100%;
-}
-
-#container ul li #check {
-  width: 30px;
-  height: 30px;
-  -webkit-appearance: none;
-  border: 2px solid grey;
-  position: relative;
-  top: 5px;
-  outline: 0;
-  border-radius: 10px;
-}
-
-#container ul li #check:checked:after {
-  content: "\2714";
-  font-size: 20px;
-  color: black;
-  padding-left: 5px;
-  background-color: lightgreen;
-  width: 12%;
-}
-
-#container ul li input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-  color: rgba(0, 0, 0.3);
-  background-color: rgb(235, 142, 142);
-  width: 100%;
-  overflow: hidden;
-
-}
-
-/* Controls  */
-#container .controls {
-  width: 40%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-#container .controls #input {
-  width: 80%;
+  background: #ffffff;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+  border-radius: 5px;
   height: 40px;
-  font-size: 20px;
-  border: 2px solid lightskyblue;
-  border-radius: 10px;
+  box-shadow: 5px 5px rgb(0, 0, 1, 0.5);
+  font-weight: bold;
+  flex-wrap: wrap;
+  width: 325px;
 }
-
-#container .controls #input:focus {
-  outline: 0;
-}
-
-#container .controls button {
-  width: 10vw;
-  align-items: center;
-  height: 30px;
-  margin: 2px;
+.deleteTask {
   cursor: pointer;
-  margin-bottom: 10px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  background: orangered;
+  color: #ffffff;
+  outline: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
-
-#container .controls button:focus {
-  outline: 0;
+.pText {
+  background: #ffffff;
+  text-transform: capitalize;
 }
-
-#container .controls button:hover {
-  transform: scale(1.05);
+.inputvalue {
+  display: flex;
+  margin: 5px;
+  margin-bottom: 60px;
 }
+.inputVal {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 5px;
 
-#container .controls #add {
-  background-color: rgb(79, 163, 231);
-  border-radius: 10px;
+  border: 2px solid rgb(69, 5, 187);
 }
-
-#container .controls #remove {
-  background-color: rgb(231, 79, 99);
-  border-radius: 10px;
+.btn {
+  width: 100px;
+  background: #097d56;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline-style: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px #03110c;
 }
-
-#container .mycheck {
-  /* opacity: 22; */
-  border-radius: 10px;
-}
-
-.visual {
-  /* opacity: 1 !important; */
-  border-radius: 10px;
-  color: black;
+.clearTask {
+  position: absolute;
+  bottom: 5px;
+  left: 15%;
+  background: orangered;
+  color: #ffffff;
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+  outline-style: none;
 }
