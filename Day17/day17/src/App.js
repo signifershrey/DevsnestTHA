@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Item from './Item';
+
+import Fooditem from './Fooditem';
+import { List } from './list';
+//Useful link - CSS to react-css
 function App() {
+
+  const item = {
+    title : "Burger",
+    cal : 56
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Calorie Read Only</h1>
+      <img src="./images/food-icon" alt="icon" />
+      {/* <h2>{item.title}</h2> */}
+      <div className="container">
+        <Item title={item.title} cal={item.cal} />
+        <Item title="Pizza" cal="100" />
+        <Item title="Coke" cal="130" />
+        {/* <Item title="Brownie" cal="230" />
+        <Item title="Momos" cal="80" />
+        <Item title="Franky" cal="130" />
+        <Item title="Lassania" cal="150" /> */}
+        {List.map((food,index) => {
+          return <Fooditem key={index} item={food} ></Fooditem>}
+          )}
+      </div>
+
     </div>
   );
 }
