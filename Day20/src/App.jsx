@@ -1,45 +1,61 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from "react";
+import Card from "./Card";
+import "./App.css";
+
+ const Data = [
+   {
+     food: "Banana 🍌",
+     calorie: 110,
+   },
+   {
+     food: "Carrot 🥕",
+     calorie: 70,
+   },
+   {
+     food: "Beer 🍻",
+     calorie: 200,
+   },
+   {
+     food: "Champaigne 🍾",
+     calorie: 179,
+   },
+   {
+     food: "Noodles 🍜",
+     calorie: 220,
+   },
+   {
+     food: "Coding 💻",
+     calorie: 0,
+   },
+ ];
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
+  const [state, setState] = useState(Data);
+
+  const handleDelete = (index) => {
+    const newState = state.filter((val, idx) => idx !== index);
+    setState(newState);
+    // console.log("newSatte");
+  };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      {state.map((val, idx) => {
+        return (
+          <Card
+            key={idx} //Key cannot be used as a reference
+            name={val.food}
+            calorie={val.calorie}
+            index={idx}
+            handleDelete={handleDelete}
+          />
+        );
+      })}
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
