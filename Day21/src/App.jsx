@@ -1,45 +1,45 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
+// import Form from "./Form";
+import UseEFFECT from "./UseEFFECT";
+import Card from "./Card";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [userInput, setUserInput] = useState({food:"" , cals:""});
+  const [state, setState] = useState([]);
 
+
+  const handleDelete = (index) => {
+    setState((prevState) => prevState.filter((val,idx) => idx != index));
+  }
+
+const handleEdit = (index,food,calorie) => {
+  
+}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <p>Learning Use Effect and Forms (Hidden from this Page) </p>
+      {/* <UseEFFECT /> */}
+      {/* <Form /> */}
+      <br />
+      <h1> Calorie Tracker </h1>
+      <br />
+      <hr />
+      <form>
+        <label>
+          Enter Food
+          <input type="text" placeholder="Add Item"></input>
+        </label>
+        <br></br>
+        <label>
+          Enter Calorie
+          <input type="number" placeholder="Enter Calorie"></input>
+        </label>
+        <br />
+        <button>Add</button>
+      </form>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
