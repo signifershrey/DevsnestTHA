@@ -10,11 +10,9 @@ const Form = () => {
   const fName = useSelector((state) => state.firstName);
   const lName = useSelector((state) => state.lastName);
   // console.log(fName);
-
-
+  
   //To use dispatch in react-redux we use Dispatch
-  const dispatch = useDispatch();  
-
+  const dispatch = useDispatch();
 
   return (
     <div>
