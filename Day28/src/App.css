@@ -1,0 +1,36 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.whp {
+  display: flex;
+  min-width: 80%;
+  max-width: 500px;
+  justify-content: space-around;
+  
+}
+.simple{
+    text-align: center;
+}
+
+.whp h2 {
+  margin-right: 30px;
+}
+
