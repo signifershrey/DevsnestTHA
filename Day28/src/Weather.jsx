@@ -33,7 +33,7 @@ const Weather = () => {
 
   return (
     <div className="container">
-      <div>
+      <div style={{ marginBottom: "2px" }}>
         <input
           type="text"
           value={city}
@@ -42,24 +42,25 @@ const Weather = () => {
         />
         <button onClick={handleSubmit}>Check now</button>
       </div>
+
       <div className="result">
         <img src={info.icon} alt="" />
-        <h1>{info.temp}</h1>
-        <p>{info.summary}</p>
+        <h1>{info.temp}°</h1>
+        <h3>{info.summary}</h3>
         <h1>{info.city_name}</h1>
       </div>
       <div className="whp">
         <div className="simple">
-          <h2>Wind Now</h2>
-          <h2>{info.wind_speed}</h2>
+          <h5>Wind Now</h5>
+          <h2>{info.wind_speed}km</h2>
         </div>
         <div className="simple">
-          <h2>humidity</h2>
-          <h2>{info.humidity}</h2>
+          <h5>Humidity</h5>
+          <h2>{info.humidity}%</h2>
         </div>
         <div className="simple">
-          <h2>Percipitation</h2>
-          <h2>{info.precipitation}</h2>
+          <h5>Percipitation</h5>
+          <h2>{info.precipitation}%</h2>
         </div>
       </div>
     </div>
